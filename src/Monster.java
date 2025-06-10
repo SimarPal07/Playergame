@@ -1,3 +1,4 @@
+//Monster class
 public class Monster {
     private String name;
     private int healthPoints;
@@ -8,7 +9,7 @@ public class Monster {
         this.healthPoints = healthPoints;
         this.attackPower = attackPower;
     }
-
+//take damage
     public void takeDamage(int amount) {
         healthPoints -= amount;
         if (healthPoints < 0) healthPoints = 0;
@@ -17,13 +18,13 @@ public class Monster {
             System.out.println(name + " has been defeated!");
         }
     }
-
+//attack player
     public void attackPlayer(Player player) {
         System.out.println(name + " attacks " + player.getName() + " for " + attackPower + " damage.");
         player.takeDamage(attackPower);
     }
-
-    public boolean isAlive() {
+//check if alive
+   public boolean isAlive() {
         return healthPoints > 0;
     }
 

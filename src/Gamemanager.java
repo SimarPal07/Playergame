@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//main loop
 public class Gamemanager {
     private static ArrayList<Player> players = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
@@ -39,8 +39,8 @@ public class Gamemanager {
             }
         }
     }
-
-    private static void createPlayer() {
+//create player
+private static void createPlayer() {
         System.out.print("Enter player name: ");
         String name = scanner.nextLine();
         // Defaults for new player
@@ -48,7 +48,7 @@ public class Gamemanager {
         players.add(p);
         System.out.println("Player " + name + " created with 100 HP, 10 Attack, Level 1.");
     }
-
+    //attack monster logic
     private static void attackMonster() {
         if (players.isEmpty()) {
             System.out.println("No players created yet.");
@@ -87,7 +87,7 @@ public class Gamemanager {
             player.levelUp();
         }
     }
-
+    //show player stats
     private static void showPlayerStats() {
         if (players.isEmpty()) {
             System.out.println("No players created yet.");

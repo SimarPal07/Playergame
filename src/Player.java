@@ -1,4 +1,4 @@
-
+//player class
 class Player {
     private String name;
     private int healthPoints;
@@ -24,7 +24,7 @@ class Player {
         return attackPower;
     }
 
-
+//take damage
     public void takeDamage(int amount) {
         healthPoints -= amount;
         if (healthPoints < 0) healthPoints = 0;
@@ -33,7 +33,7 @@ class Player {
             System.out.println(name + " has been defeated!");
         }
     }
-
+//level up
     public void levelUp() {
         level++;
         attackPower += 5;
@@ -47,7 +47,7 @@ class Player {
         System.out.println("Attack Power: " + attackPower);
         System.out.println("Level: " + level);
     }
-
+//check if alive
     public boolean isAlive() {
         return healthPoints > 0;
     }
